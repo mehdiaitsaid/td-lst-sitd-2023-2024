@@ -2,7 +2,7 @@ package td2;
 
 public class Exo5 {
     public static void main(String[] args){
-        rectangle p= new rectangle(2.5,3);
+        rectangle p= new rectangle(2,1);
             System.out.println(p.toString());
 
     } }
@@ -56,7 +56,7 @@ public class Exo5 {
         public String toString() {
             return "rectangle{" +
                     "longueur=" + longueur +
-                    ", largeur=" + largeur +"p= "+perimetre()+"a= "+air()+
+                    ", largeur=" + largeur + " ,p= "+perimetre()+" ,a= "+air()+
                     '}';
         }
     }
