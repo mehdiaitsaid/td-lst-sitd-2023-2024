@@ -2,19 +2,8 @@ package sanaaazza.td2;
 public class Exo1 {
     class chaffeur{
         public static void main(String[] args){
-            voiture voiture1 = new voiture();
-           String k= voiture1.getMarque();
-            System.out.println( k);
-            String k1= voiture1.getModele();
-            System.out.println( k1);
-            String k2= voiture1.getAnnee();
-            System.out.println( k2);
-            double k3=  voiture1.getVitesse();
-            System.out.println( k3);
-            voiture1.setMarque("bmw");
-            voiture1.setModele("2023");
-            voiture1.setAnnee("2024");
-            voiture1.setVitesse(50);
+            voiture voiture1 = new voiture("bms","20","2023",50);
+
            System.out.println( voiture1.toString());
 
         }  }}
@@ -25,7 +14,7 @@ public class Exo1 {
         private String modele;
         private String annee;
         private double vitesse;
-       public  voiture(){}
+
 public voiture(String marque,String modele,String anne,double vitesse){vitesse=0;
     this.marque=marque;
     this.modele=modele;
