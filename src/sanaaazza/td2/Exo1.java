@@ -1,84 +1,88 @@
 package sanaaazza.td2;
 public class Exo1 {
-    class chaffeur{
-        public static void main(String[] args){
-            voiture voiture1 = new voiture("bms","20","2023",50);
+ public static void main(String[] args){
+     //batiment batiment1= new batiment();
+     //batiment1.setAdresse("settat");
+    // System.out.println(batiment1.getAdresse());
+      maison m= new maison();
+      m.setNbrchambre(52);
+      System.out.println(m.getNbrchambre());
+    System.out.println(m.toString());
 
-           System.out.println( voiture1.toString());
-
-        }  }}
-
-
-   class voiture{
- private String marque;
-        private String modele;
-        private String annee;
-        private double vitesse;
-
-public voiture(String marque,String modele,String anne,double vitesse){vitesse=0;
-    this.marque=marque;
-    this.modele=modele;
-    this.annee=anne;
-    this.vitesse=vitesse;
-
-}
-
-        public String getMarque() {
-            return marque;
-        }
-
-        public String getModele() {
-            return modele;
-        }
-
-        public String getAnnee() {
-            return annee;
-        }
-
-        public double getVitesse() {
-            return vitesse;
-        }
-
-        public void setMarque(String marque) {
-            this.marque = marque;
-        }
-
-        public void setModele(String modele) {
-            this.modele = modele;
-        }
-
-        public void setAnnee(String annee) {
-            this.annee = annee;
-        }
-
-        public void setVitesse(double vitesse) {
-            this.vitesse = vitesse;
-        }
-
-        @Override
-        public String toString() {
-            return "voiture{" +
-                    "marque='" + marque + '\'' +
-                    ", modele='" + modele + '\'' +
-                    ", annee='" + annee + '\'' +
-                    ", vitesse=" + vitesse +
-                    '}';
-        }
-        public double accelere( double v){
-    this.vitesse+=5;
-    return v;
-        }
-        public double relantir(double v){
-    this.vitesse-=5;
-    return v;
-        }
-        public void arret( ){
-    if(this.vitesse==0) System.out.println("true");
-    else System.out.println("false");
-        }
+ }
 
 
 
     }
+   class batiment{  private String adresse;
+
+        public batiment(){
+
+    }
+    public batiment(String adresse){
+      this.adresse=adresse;
+    }
+
+       public String getAdresse() {
+           return adresse;
+       }
+
+       public void setAdresse(String adresse) {
+           this.adresse = adresse;
+       }
+
+       @Override
+       public String toString() {
+           return "batiment{" +
+                   "adresse='" + adresse + '\'' +
+                   '}';
+       }   }
+     class maison  extends batiment{
+            private  int nbrchambre;
+            public  maison(){}
+            public maison(int nbrchambre){
+                this.nbrchambre=nbrchambre;
+            }
+            public maison (String adresse , int nbrchambre ){
+                super(adresse);
+                this.nbrchambre=nbrchambre;
+            }
+
+           public int getNbrchambre() {
+               return nbrchambre;
+           }
+
+           public void setNbrchambre(int nbrchambre) {
+               this.nbrchambre = nbrchambre;
+           }
+
+           @Override
+           public String toString() {
+               return "maison{" +
+                       "nbrchambre=" + nbrchambre +
+                       '}';
+           }
+
+       }
+       class immeuble extends batiment{
+             private int nbrappartement ;
+            public immeuble(){
+
+            }
+            public immeuble(int nbrappartement, String adresse){
+                super(adresse);
+                this.nbrappartement=nbrappartement;
+            }
+
+
+           public int getNbrappartement() {
+               return nbrappartement;
+           }
+
+           public void setNbrappartement(int nbrappartement) {
+               this.nbrappartement = nbrappartement;
+           }
+       }
+
 
 
