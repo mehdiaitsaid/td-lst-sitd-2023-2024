@@ -13,7 +13,6 @@ public class Exo4 {
     }
 
 
-
 }
 class batiment{  private String adresse;
 
