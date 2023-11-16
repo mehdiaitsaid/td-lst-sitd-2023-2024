@@ -3,7 +3,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Person p = new Student() ;
+        while (true) {
+
+            Scanner s = new Scanner(System.in);
+            System.out.println("Le a :");
+            int a = s.nextInt();
+
+            System.out.println("Le b :");
+            int b = s.nextInt();
+
+            int d = 0;
+
+            d =  a / b;
+
+            System.out.println("Le d=" + d);
+
+        }
+
+
 
     }
 
@@ -70,6 +87,25 @@ class Auth{
 //        }
 //
 //        code for auth
+
+    }
+}
+
+
+
+abstract class TestB implements Account, Notification{
+
+}
+
+class Tetsta extends TestB{
+
+    @Override
+    public String getUsername() {
+        return null;
+    }
+
+    @Override
+    public void send() {
 
     }
 }
