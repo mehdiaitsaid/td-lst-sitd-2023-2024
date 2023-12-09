@@ -9,6 +9,8 @@ public class Main {
             System.out.println("Le a :");
             int a = s.nextInt();
 
+
+
             System.out.println("Le b :");
             int b = s.nextInt();
 
