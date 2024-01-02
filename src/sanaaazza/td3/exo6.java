@@ -48,7 +48,7 @@ abstract class Figure {
     }
 }
 
-class Disque extends Figure{
+class Disque extends figure {
     private Point centre;
     private int rayon;
 
@@ -99,7 +99,7 @@ class Disque extends Figure{
 
 }
 
-class Rectangle extends Figure{
+class Rectangle extends figure {
     private double longeur;
     private double largeur;
 

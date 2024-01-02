@@ -27,7 +27,7 @@ public class exo5 {
     }
 }
 
-abstract class Figure {
+abstract class figure {
     protected String nom;
 
     public abstract double getPerimeter();
@@ -49,17 +49,17 @@ abstract class Figure {
     }
 }
 
-class Disque extends Figure{
+class disque extends figure {
     private Point centre;
     private int rayon;
 
-    public Disque(){
+    public disque(){
     }
-    public Disque(Point centre, int rayon){
+    public disque(Point centre, int rayon){
         this.centre = centre;
         this.rayon = rayon;
     }
-    public Disque(Point centre, int rayon,String nom){
+    public disque(Point centre, int rayon,String nom){
         this(centre,rayon);
         super.nom = nom;
     }
@@ -100,20 +100,20 @@ class Disque extends Figure{
 
 }
 
-class Rectangle extends Figure{
+class rectangle extends figure {
     private double longeur;
     private double largeur;
 
-    public Rectangle(){
+    public rectangle(){
 
     }
 
-    public Rectangle(double longeur, double largeur){
+    public rectangle(double longeur, double largeur){
         this.largeur= largeur;
         this.longeur = longeur;
     }
 
-    public Rectangle(double longeur, double largeur, String nom){
+    public rectangle(double longeur, double largeur, String nom){
         this(longeur, largeur);
         super.nom = nom;
     }
